@@ -1,0 +1,435 @@
+
+/* Global Styles */
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+    color: #333;
+}
+
+/* Header */
+header {
+    padding: 10px 0;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: #333;
+    color: white;
+    z-index: 1000; /* Ensures the header stays on top */
+}
+.header-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+header h1 {
+    font-size: 24px;
+    /* text-align: center; */
+}
+
+header nav {
+    text-align: center;
+    margin-top: 10px;
+}
+
+header nav ul {
+    list-style: none;
+    padding: 0;
+}
+
+header nav ul li {
+    display: inline;
+    margin: 0 10px;
+}
+
+header nav ul li a {
+    color: #fff;
+    text-decoration: none;
+}
+.nav-list {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+}
+
+.nav-list li {
+    margin: 0 15px;
+}
+.menu-icon {
+    display: none;
+    flex-direction: column;
+    justify-content: space-around;
+    width: 30px;
+    height: 30px;
+    cursor: pointer;
+}
+.menu-icon{
+    display: none;
+}
+
+.account{
+    width: 150px;
+    background-color: aqua;
+    border-radius: 1rem;
+
+}
+/* Responsive Styles */
+@media (max-width: 768px) {
+    .nav-list{
+        display: none;
+        width: 100%;
+        margin-bottom: 20px;
+    }
+    .menu-icon {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        width: 2rem;
+        height: 1rem;
+        margin-left: 10rem;
+        cursor: pointer;
+    } 
+    .bar {
+        display: block;
+        width: 2.5rem;
+        height: 0.5rem;
+        background-color: rgb(29, 186, 45);
+        margin: 0.1rem;
+    }
+    .header-container {
+        display: flex;
+        /* flex-direction: column; */
+        justify-content: center;
+        align-items: center;
+    }
+}
+
+/* Hero Section */
+.hero {
+    background: url('road-construction.jpg') no-repeat center center/cover;
+    color: #fff;
+    padding: 100px 0;
+    text-align: center;
+}
+
+.hero h2 {
+    font-size: 36px;
+    margin-bottom: 20px;
+}
+
+.hero p {
+    font-size: 18px;
+    margin-bottom: 30px;
+}
+
+.hero .btn {
+    background: #ff6600;
+    color: #fff;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 5px;
+}
+
+/* Services Section */
+.services {
+    padding: 50px 0;
+    background: #f4f4f4;
+    text-align: center;
+}
+
+.services h2 {
+    font-size: 28px;
+    margin-bottom: 40px;
+}
+
+.service-grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+.service-item {
+    background: #fff;
+    padding: 20px;
+    margin: 10px;
+    border-radius: 5px;
+    width: 30%;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.service-item h3 {
+    margin-bottom: 15px;
+    font-size: 22px;
+}
+
+/* Projects Section */
+.projects {
+    padding: 50px 0;
+    background: #e2e2e2;
+    text-align: center;
+}
+
+.projects h2 {
+    font-size: 28px;
+    margin-bottom: 40px;
+}
+
+.project-grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+.project-item {
+    background: #fff;
+    padding: 20px;
+    margin: 10px;
+    border-radius: 5px;
+    width: 30%;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.project-item h3 {
+    margin-bottom: 15px;
+    font-size: 22px;
+}
+
+/* Footer */
+footer {
+    background: #333;
+    color: #fff;
+    padding: 20px 0;
+    text-align: center;
+}
+
+footer p {
+    margin: 5px 0;
+}
+
+footer a {
+    color: #ff6600;
+    text-decoration: none;
+}
+
+
+
+/* *{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+body{
+    height: 100vh;
+    display: grid;
+    grid-template-rows: 1fr 7fr 2fr;
+}
+/* home page stylesheet */
+/* .home-header{
+    color: whitesmoke;
+    margin: 0 1rem;
+    display: flex;
+    flex-direction:row;
+    align-items: center;
+    justify-content:space-between;
+    background-color: rgb(103, 139, 171);
+}
+
+.home-main{
+    margin: 0 1rem 0 1rem;
+    color: white;
+    font-weight: bold;
+    display: flex;
+    flex-direction:column;
+    justify-content: center;
+    align-items: center;
+    background-image: url('../images/about.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.home-footer{
+    margin: 0 1rem 0 1rem;
+    display: flex;
+    flex-direction:row;
+    align-items: center;
+    justify-content: space-between;
+    background-color: rgb(205, 203, 214);
+}
+/* about page styling */
+
+.about-main{
+    background-color: #f8f4f4;
+}
+
+a{
+    margin: 0.5rem;
+    color: white;
+}
+/* about page */
+.about-main{
+    margin: 1rem;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+.about-description{
+    display: flex;
+    flex-direction: column;
+    /* justify-content: center;
+    align-items: center; */
+}
+.head-p{
+    background: rgb(224, 251, 222);
+    background: linear-gradient(360deg, rgb(245, 255, 245) 0%, rgb(202, 204, 202) 100%);
+    padding: 100px 0 20px 0;
+    /* text-align: center; */
+}
+.head-p h1{
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+}
+.head-p p{
+    font-size: 1rem;
+    color: #323030;
+    max-width: 60rem;
+    margin: 0 auto;
+    /* word-break: break-all; */
+    /* text-wrap: wrap;
+    margin-left: auto; */
+
+}
+/* .ab-p{
+    margin: 1rem 15rem 1rem 15rem; 
+    text-align: center;
+     text-wrap: wrap; 
+     word-break: break-all;
+      font-size: larger;
+} */
+.mission-vission{
+    margin: 4rem;
+    max-width: 60rem;
+    display: flex; 
+    flex-direction: column;
+    /* justify-content: center; 
+    align-items: center;  */
+    /* text-align: center; */
+}
+.mission{
+    /* border: 1px solid black; */
+    margin: 1rem;
+    font-size: 1rem;
+    color: #323030;
+    max-width: 60rem;
+    margin: 0 auto;
+    word-break: break-all;
+}
+.mission p{
+    font-size: 1rem;
+    color: #323030;
+    max-width: 60rem;
+    margin: 0 auto;
+    word-break: break-all;
+}
+.vission{
+    /* border: 1px solid black; */
+    font-size: 1rem;
+    color: #323030;
+    max-width: 60rem;
+    margin: 0 auto;
+    word-break: break-all;
+}
+.role-resp{
+    display: flex; 
+    flex-direction: column; 
+    /* justify-content: center; 
+    text-align: center; */
+}
+.info-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    margin: 0;
+    border-color: beige;
+}
+/* resource page */
+.resource-description{
+    background-color: rgb(240, 238, 235);
+    display: flex;
+    flex-direction: column;
+    margin: 2rem;
+}
+.resource-description h2, .resource-description h3, .resource-description ul,.resource-description p{
+    margin: 1rem;
+}
+.resource-description h2{
+    text-align: center;
+}
+.dc2{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 1rem;
+}
+.dc2 h4{
+    margin: 1rem;
+}
+.dc3{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 1rem;
+}
+.dc3 h4{
+    margin: 1rem;
+}
+table,tr,th,td{
+    border: 1px solid black;
+}
+/* road page */
+.road-main{
+    display:grid;
+    grid-template-columns:1fr 1fr 1fr 1fr; 
+    margin: 2rem; 
+    justify-content: space-around;
+}
+.info-container{
+    margin: 1rem; 
+    /* border: 1px solid rgb(158, 156, 156); */
+    margin-top: 1rem;
+}
+.info-container img{
+    width: 20rem; 
+    height: 15rem;
+}
+/* blog page */
+.blog-main{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.blog-contennt{
+    width: 30rem;
+    margin: 1rem;
+}
+.blog-contennt img{
+    width: 30rem;
+    margin: 1rem;
+}
+.blog-contennt p{
+    margin: 0.5rem;
+} 
